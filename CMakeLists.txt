@@ -16,7 +16,7 @@ if (PYSTAND_CONSOLE)
 else()
 	add_executable(PyStand WIN32 ${sources})
 endif()
-
+add_definitions(-DPYSTAND_CONSOLE=ON)
 # static link
 if (CMAKE_GENERATOR MATCHES "Visual Studio")
 	set(CMAKE_FIND_LIBRARY_SUFFIXES ".lib")
